@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/brandonruizmora/fizzbuzz#readme",
   "devDependencies": {
-    "jest": "^28.0.1"
+    "jest": "^26.0.0"
   }
 }
