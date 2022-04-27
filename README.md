@@ -1,2 +1,2 @@
 # FIZZBUZZ APP
-Refactoring JS & API
+Refactoring to Object Oriented Programming JS & developing an API
