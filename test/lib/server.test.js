@@ -23,4 +23,12 @@ describe('Server test suite', () => {
         expect.assertions(2);
         handler();
     });
+    test('/v1/explorers/usernames/node returns 10 explorers', async () => {
+        const response = await request(app).get("/v1/explorers/usernames/node");
+        expect(response.body.mission).toBe("node");
+        expect(response.body.explorers.length).toBe(10);
+        expect(response.statusCode).toBe(200);
+        expect.assertions(3);
+        handler();
+    });
 });
