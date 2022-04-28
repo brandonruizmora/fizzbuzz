@@ -16,4 +16,11 @@ describe('Server test suite', () => {
         expect.assertions(2);
         handler();
     });
+    test('/v1/explorers/amount/java returns 5 explorers', async () => {
+        const response = await request(app).get("/v1/explorers/amount/java");
+        expect(response.body.quantity).toBe(5);
+        expect(response.statusCode).toBe(200);
+        expect.assertions(2);
+        handler();
+    });
 });
