@@ -14,4 +14,10 @@ describe("ExplorerController class test suit", () => {
         const totalExplorerInNode = ExplorerController.getExplorersAmonutByMission("node");
         expect(totalExplorerInNode).toBe(10);
     });
+    test("getValidationInNumber esta regresando la validación correctamente", () => {
+        const fizzbuzz = ExplorerController.getValidationInNumber(1);
+        expect(fizzbuzz).toBe(1);
+        const fizzbuzz2 = ExplorerController.getValidationInNumber(15);
+        expect(fizzbuzz2).toBe("FIZZBUZZ");
+    });
 });
