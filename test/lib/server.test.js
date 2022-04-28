@@ -31,4 +31,22 @@ describe("Server test suite", () => {
         expect.assertions(3);
         handler();
     });
+    test("/v1/fizzbuzz/:score returns correct object 1", async () => {
+        const response = await request(app).get("/v1/fizzbuzz/1");
+        expect(response.body.score).toBe("1");
+        expect(response.body.trick).toBe("1");
+        expect(response.body).toEqual({score: "1", trick: "1"});
+        expect(response.statusCode).toBe(200);
+        expect.assertions(4);
+        handler();
+    });
+    test("/v1/fizzbuzz/:score returns correct object FIZZBUZZ", async () => {
+        const response = await request(app).get("/v1/fizzbuzz/15");
+        expect(response.body.score).toBe("15");
+        expect(response.body.trick).toBe("FIZZBUZZ");
+        expect(response.body).toEqual({score: "15", trick: "FIZZBUZZ"});
+        expect(response.statusCode).toBe(200);
+        expect.assertions(4);
+        handler();
+    });
 });
