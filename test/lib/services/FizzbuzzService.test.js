@@ -23,4 +23,18 @@ describe("FizzbuzzService class test suit", () => {
         expect(explorer15.trick).toBe("FIZZBUZZ");
 
     });
+    test("applyValidationInNumber se esta devolviendo el valor correctamente", () => {
+        let score = 1;
+        score = FizzbuzzService.applyValidationInNumber(score);
+        expect(score).toBe(1);
+        let score2 = 3;
+        score2 = FizzbuzzService.applyValidationInNumber(score2);
+        expect(score2).toBe("FIZZ");
+        let score3 = 5;
+        score3 = FizzbuzzService.applyValidationInNumber(score3);
+        expect(score3).toBe("BUZZ");
+        let score4 = 15;
+        score4 = FizzbuzzService.applyValidationInNumber(score4);
+        expect(score4).toBe("FIZZBUZZ");
+    });
 });
